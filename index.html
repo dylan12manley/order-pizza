@@ -9,10 +9,29 @@
   </head>
   <body>
     <div class="container">
+      <form>
       <div id="sizes">
-
+        <h4>Select pizza size:</h4>
+        <div>
+          <input type="radio" id="extraLarge" name="sizes" value="extraLarge">
+          <label for="extraLarge">Extra Large</label>
+        </div>
+        <div>
+          <input type="radio" id="large" name="sizes" value="large">
+          <label for="large">Large</label>
+        </div>
+        <div>
+          <input type="radio" id="medium" name="sizes" value="medium">
+          <label for="medium">Medium</label>
+        </div>
+        <div>
+          <input type="radio" id="small" name="sizes" value="small">
+          <label for="small">Small</label>
+        </div>
       </div>
       <div id="toppings">
+        <h4>Select your toppings:</h4>
+        <h5>Each topping added is an additional $2.00.</h5>
         <div>
           <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
           <label for="pepperoni">Pepperoni</label>
@@ -46,6 +65,10 @@
           <label for="blackOlives">Black Olives</label>
         </div>
       </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+
     </div>
   </body>
 </html>

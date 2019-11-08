@@ -6,7 +6,7 @@ function Pizza(size, toppings){
 
 Sub.prototype.getPrice = function(){
   this.toppings.forEach(function(toppings){
-    this.price += 1;
+    this.price += 2;
   });
   if (this.size === extraLarge){
     this.price += 24;
