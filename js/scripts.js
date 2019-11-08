@@ -34,11 +34,11 @@ $(document).ready(function() {
   console.log(myPizza);
     let price = myPizza.getPrice();
 
-    console.log(myPizza.size + toppingsArray + price);
+    console.log(price);
     $('#pizzaResults').text(myPizza.size + toppingsArray + price);
     $('#pizzaResults').text(myPizza.size + toppingsArray + price);
     $('#pizzaResults').fadeOut(function() {
-      $(this).text('myPizza.size + " with " + toppingsArray " for the price of $" + price').fadeIn();
+      $(this).text("You have ordered one "+myPizza.size+" with "+toppingsArray+" for the price of $"+price).fadeIn();
     // $('#pizaResult').fadeOut(function() {
     //   $(this).text(toppingsArray).fadeIn();
     // $('#pizaResult').fadeOut(function() {
