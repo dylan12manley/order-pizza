@@ -28,9 +28,6 @@ $(document).ready(function() {
     let toppingsArray = [];
     let sizeInput = $(".sizes").val();
     console.log(sizeInput);
-    // for (var i = 0; i <= toppingsInputs.length; i++) {
-    //   toppingsArray.push($("input.toppingInput:checked").val())
-    // };
     toppingsInputs.forEach(function(topping) {
       toppingsArray.push(topping.val());
     });
