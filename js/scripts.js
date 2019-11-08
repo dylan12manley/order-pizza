@@ -29,7 +29,7 @@ $(document).ready(function() {
     let sizeInput = $(".sizes").val();
     console.log(sizeInput);
     toppingsInputs.forEach(function(topping) {
-      toppingsArray.push(topping.val());
+      toppingsArray.push(topping.value);
     });
     console.log(toppingsArray);
     let myPizza = new Pizza(sizeInput, toppingsArray)
