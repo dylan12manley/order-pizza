@@ -21,7 +21,7 @@ __
 |-|-|-|
 |User selects pizza size|"click"|Medium|
 |User selects toppings|"click"|Pepperoni|
-|User clicks "order" button|"click"|"Medium pizza with Pepperoni"|  
+|User clicks "order" button|"click"|"Medium pizza with Pepperoni, $17"|  
 
 
 
