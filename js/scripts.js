@@ -19,3 +19,10 @@ Sub.prototype.getPrice = function(){
   }
   return this.price
 }
+
+$(document).ready(function() {
+  $("#submit").submit(function(event) {
+    event.preventDefault();
+    let toppingsInputs = $("#toppings : checked")
+  });
+});
