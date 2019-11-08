@@ -23,16 +23,20 @@ Pizza.prototype.getPrice = function(){
 $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
-    let toppingsInputs = [$(".toppingInput:checked")]
-    console.log(typeof toppingsInputs);
+    let toppingsInputs = $(".toppingInput:checked").get();
+    console.log(toppingsInputs);
     let toppingsArray = [];
-    console.log(toppingsArray);
-    let sizeInput = $("#sizes").val();
-    toppingsInputs.forEach(function(toppingInput) {
-      toppingsArray.push(toppingInput.val());
+    let sizeInput = $(".sizes").val();
+    console.log(sizeInput);
+    // for (var i = 0; i <= toppingsInputs.length; i++) {
+    //   toppingsArray.push($("input.toppingInput:checked").val())
+    // };
+    toppingsInputs.forEach(function(topping) {
+      toppingsArray.push(topping.val());
     });
     console.log(toppingsArray);
     let myPizza = new Pizza(sizeInput, toppingsArray)
     let price = myPizza.getPrice();
+    console.log(price);
   });
 });
