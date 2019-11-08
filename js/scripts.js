@@ -4,7 +4,7 @@ function Pizza(size, toppings){
   this.price = 0;
 }
 
-Sub.prototype.getPrice = function(){
+Pizza.prototype.getPrice = function(){
   this.toppings.forEach(function(toppings){
     this.price += 2;
   });
@@ -21,8 +21,17 @@ Sub.prototype.getPrice = function(){
 }
 
 $(document).ready(function() {
-  $("#submit").submit(function(event) {
+  $("form#order").submit(function(event) {
     event.preventDefault();
-    let toppingsInputs = $("#toppings : checked")
+    let toppingsInputs = $('.toppingInput').checked
+    console.log(toppingsInputs);
+    let toppingsArray = [];
+    console.log(toppingsArray);
+    let sizeInput = $("#sizes").val()
+    toppingsInputs.forEach(function(toppingsInputs){
+      toppingsArray.push(toppingsInputs.val());
+    });
+    let myPizza = new Pizza(sizeInput, toppingsArray)
+    let price = myPizza.getPrice();
   });
 });
