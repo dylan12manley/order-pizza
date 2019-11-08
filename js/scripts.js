@@ -23,14 +23,20 @@ Pizza.prototype.getPrice = function(){
 $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
-    let toppingsInputs = $('.toppingInput').checked
+    let toppingsInputs = $(".toppingInput:checked")
     console.log(toppingsInputs);
     let toppingsArray = [];
     console.log(toppingsArray);
-    let sizeInput = $("#sizes").val()
-    toppingsInputs.forEach(function(toppingsInputs){
-      toppingsArray.push(toppingsInputs.val());
+    let sizeInput = $("#sizes").val();
+    toppingsInputs.forEach(function(element) {
+      console.log(element);
     });
+
+
+    toppingsInputs.forEach(function(toppingInput) {
+      toppingsArray.push(toppingInput.val());
+    });
+    console.log(toppingsArray);
     let myPizza = new Pizza(sizeInput, toppingsArray)
     let price = myPizza.getPrice();
   });
