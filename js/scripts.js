@@ -1,3 +1,4 @@
+//Buisness Interface//
 function Pizza(size, toppings){
   this.size = size;
   this.toppings = toppings;
@@ -5,6 +6,7 @@ function Pizza(size, toppings){
 }
 
 Pizza.prototype.getPrice = function(){
+  console.log(this.price);
   this.toppings.forEach(function(toppings){
     this.price += 2;
     console.log(this.price);
@@ -20,7 +22,7 @@ Pizza.prototype.getPrice = function(){
   }
   return this.price
 }
-
+ // User Interface//
 $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
@@ -31,18 +33,9 @@ $(document).ready(function() {
       toppingsArray.push(topping.value);
     });
     let myPizza = new Pizza(sizeInput, toppingsArray)
-  console.log(myPizza);
     let price = myPizza.getPrice();
-
-    console.log(price);
-    $('#pizzaResults').text(myPizza.size + toppingsArray + price);
-    $('#pizzaResults').text(myPizza.size + toppingsArray + price);
     $('#pizzaResults').fadeOut(function() {
       $(this).text("You have ordered one "+myPizza.size+" with "+toppingsArray+" for the price of $"+price).fadeIn();
-    // $('#pizaResult').fadeOut(function() {
-    //   $(this).text(toppingsArray).fadeIn();
-    // $('#pizaResult').fadeOut(function() {
-    //   $(this).text(price).fadeIn();
     });
   });
 });
