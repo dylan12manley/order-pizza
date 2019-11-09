@@ -12,7 +12,7 @@ __
 
 * _Click the clone or download button and copy the link_
 * _Open your terminal and type "git clone (link)"_
-* _Double click on the dice-game folder_
+* _Double click on the Order-Pizza folder_
 * _Double click on index.html to open the file in a web browser_
 
 ## Specs
