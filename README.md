@@ -27,6 +27,7 @@ __
 
 ## Known Bugs
 
+_getPrice constructor is not functioning properly, the price is never calculated accurately_
 
 ## Support and contact details
 
