@@ -17,24 +17,27 @@
         </div>
       </div>
       <form id="order">
-        <div id="sizes">
+        <div>
           <h4>Select pizza size:</h4>
-          <div>
-            <input type="radio" id="size" name="sizes" value="XL">
+          <select class="form-control" id="sizes">
+            <option value="Extra Large">Extra Large</option>
+            <option value="Large">Large</option>
+            <option value="Medium">Medium</option>
+            <option value="Small">Small</option>
+          </select>
+          <!-- <div id="sizes">
+            <input type="radio" class="size" name="sizes" value="Extra Large">
             <label for="extraLarge">Extra Large</label>
-          </div>
-          <div>
-            <input type="radio" id="size" name="sizes" value="Large">
+
+            <input type="radio" class="size" name="sizes" value="Large">
             <label for="large">Large</label>
-          </div>
-          <div>
-            <input type="radio" id="size" name="sizes" value="Medium">
+
+            <input type="radio" class="size" name="sizes" value="Medium">
             <label for="medium">Medium</label>
-          </div>
-          <div>
-            <input type="radio" id="size" name="sizes" value="Small">
+
+            <input type="radio" class="size" name="sizes" value="Small">
             <label for="small">Small</label>
-          </div>
+          </div> -->
         </div>
         <div id="toppings">
           <h4>Select your toppings:</h4>
@@ -72,9 +75,7 @@
             <label for="blackOlives">Black Olives</label>
           </div>
         </div>
-        <div>
-          <button type="submit">Place Order</button>
-        </div>
+        <button type="submit">Place Order</button>
       </form>
       <div id="pizzaResults">
         <p></p>
