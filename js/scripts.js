@@ -6,13 +6,9 @@ function Pizza(size, toppings, price) {
 }
 
 Pizza.prototype.getPrice = function() {
-
   this.toppings = $(".toppingInput:checked").get();
-  console.log(this.toppings);
-  this.toppings.forEach(function(topping) {
-    this.price += 2;    
-  });
-  console.log(this.price);
+  this.price = 0;
+  this.price = ((this.toppings.length)*2)
   if (this.size === "XL"){
     this.price += 24;
   } else if (this.size === "Large"){
@@ -38,7 +34,7 @@ $(document).ready(function() {
     let price = myPizza.getPrice();
     console.log(price);
     $('#pizzaResults').fadeOut(function() {
-      $(this).text("You have ordered one "+myPizza.size+" with "+toppingsArray+" for the price of $"+price).fadeIn();
+      $(this).text("You have ordered one "+myPizza.size+" pizza with "+toppingsArray+" for the price of $"+price).fadeIn();
     });
   });
 });
